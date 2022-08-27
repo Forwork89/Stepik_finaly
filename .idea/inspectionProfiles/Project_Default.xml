@@ -1,0 +1,102 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="15">
+            <item index="0" class="java.lang.String" itemvalue="pages" />
+            <item index="1" class="java.lang.String" itemvalue="lxml-to-dict" />
+            <item index="2" class="java.lang.String" itemvalue="lxmlmeld" />
+            <item index="3" class="java.lang.String" itemvalue="lxmlbind" />
+            <item index="4" class="java.lang.String" itemvalue="lxml-wrapper" />
+            <item index="5" class="java.lang.String" itemvalue="lxml-xpath-ipaddress" />
+            <item index="6" class="java.lang.String" itemvalue="lxmlHtml" />
+            <item index="7" class="java.lang.String" itemvalue="lxml-mate" />
+            <item index="8" class="java.lang.String" itemvalue="lxmlmechanize" />
+            <item index="9" class="java.lang.String" itemvalue="lxml2dict" />
+            <item index="10" class="java.lang.String" itemvalue="lxml-asserts" />
+            <item index="11" class="java.lang.String" itemvalue="lxml" />
+            <item index="12" class="java.lang.String" itemvalue="lxml-xpath2-functions" />
+            <item index="13" class="java.lang.String" itemvalue="ixml" />
+            <item index="14" class="java.lang.String" itemvalue="lxml2json" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="filter" />
+          <option value="str" />
+          <option value="input" />
+          <option value="sum" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="app.requests_toolbelt" />
+          <option value="pytest.key" />
+          <option value="pytest.status" />
+          <option value="name.pf" />
+          <option value="app.pf.*" />
+          <option value="app.PetFriends.add_new_pet_simple" />
+          <option value="test_s.russian_chars" />
+          <option value="test_s.chinese_chars" />
+          <option value="test_s.special_chars" />
+          <option value="test.api" />
+          <option value="test.Test_s.russian_chars" />
+          <option value="test.Test_s.chinese_chars" />
+          <option value="test.Test_s.special_chars" />
+          <option value="test.api.generate_string" />
+          <option value="test.api.russian_chars" />
+          <option value="test.api.chinese_chars" />
+          <option value="test.api.special_chars" />
+          <option value="test.negat_test.generate_string" />
+          <option value="test.negat_test.russian_chars" />
+          <option value="test.negat_test.chinese_chars" />
+          <option value="test.negat_test.special_chars" />
+          <option value="test.new_negat_t" />
+          <option value="tests.myapp.*" />
+          <option value="selenium.get" />
+          <option value="selenium.quit" />
+          <option value="str.get_attribute" />
+          <option value="pytest.driver" />
+          <option value="test.api.requests_toolbelt" />
+          <option value="pages.ozon_pages.*" />
+          <option value="ui.genres_df" />
+          <option value="ui.top_genres" />
+          <option value="ui.go" />
+          <option value="list.send_keys" />
+          <option value="selenium.webdriver.edge.webdriver.WebDriver.Edge" />
+          <option value="random.random.choice" />
+          <option value="builtins.input.send_keys" />
+          <option value="test_p.gtest" />
+          <option value="selenium.webdriver.common.by.By.text" />
+          <option value="str.text" />
+          <option value="urllib3.request.config.getoption" />
+          <option value="test_main_page.main_page" />
+          <option value="MainPage" />
+          <option value="pages.test_product_page.bad_urls" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
