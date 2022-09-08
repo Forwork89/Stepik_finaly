@@ -28,6 +28,7 @@ class LoginPageLocators:
 
 
 class ProductPageLocators:
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR,".Success message is presented, but should not be")
     BTN_ADD_TO_BASKET = (By.CSS_SELECTOR, ".product_main form button.btn-add-to-basket")
     PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main p.price_color")

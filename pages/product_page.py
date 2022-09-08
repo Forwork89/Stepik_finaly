@@ -1,3 +1,8 @@
+from telnetlib import EC
+
+from selenium.common import TimeoutException
+from selenium.webdriver.support.wait import WebDriverWait
+
 from .base_page import BasePage
 from .locators import ProductPageLocators
 
@@ -25,7 +30,7 @@ class ProductPage(BasePage):
         btn.click()
 
     def is_disappered_success_message(self):
-        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGES), "Wrong show success message"
+        assert self.is_disappeared("Wrong show success message")
 
     def should_be_name(self):
         assert self.is_element_present(*ProductPageLocators.PRODUCT_NAME), "Name of product not found"
@@ -44,7 +49,7 @@ class ProductPage(BasePage):
                                                                                "basket not found "
 
     def should_not_be_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGES), "Wrong show success message"
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGES), "Success message is presented"
 
     def should_be_add_button(self):
         assert self.is_element_present(*ProductPageLocators.BTN_ADD_TO_BASKET), "Button 'Add to basket' is not " \

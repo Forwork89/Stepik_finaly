@@ -60,13 +60,11 @@ class BasePage:
         return False
 
     # проверка на исчезновение элемента в течении timeout
-    def is_disappeared(self, how, what, timeout=4, screenshot=True):
+    def is_disappeared(self, how, what, timeout=4):
         try:
             WebDriverWait(self.browser, timeout, 1, TimeoutException). \
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
-            if screenshot:
-                self.take_screenshot()
             return False
 
         return True
