@@ -1,4 +1,5 @@
-from faker import Faker
+import time
+
 import pytest
 from .pages.base_page import BasePage
 from pages.product_page import ProductPage
@@ -71,6 +72,7 @@ class TestLoginFromProductPage():
         self.product.delete()
 
 
+@pytest.mark.need_review
 def test_guest_can_go_to_login_page_from_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
@@ -99,28 +101,15 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
 
 
 class TestUserAddToBasketFromProductPage:
-    password = 'Qw21eR4t50'
-    faker: Faker = Faker(locale='ru-RU')
-
-
-@pytest.fixture(scope="function", autouse=True)
-def setup(self, browser):
-    """
-        открыть страницу регистрации
-        зарегистрировать нового пользователя
-        проверить, что пользователь залогинен
-
-        так обычно не делают в setup это просто для примера
-    """
-    page = ProductPage(browser, link)
-    page.open()
-    page.go_to_login_page()
-
-    login_page = LoginPage(browser, browser.current_url)
-    login_page.should_be_login_page()
-
-    login_page.register_new_user(self.faker.email(), self.password)
-    login_page.should_be_authorized_user()
+    @pytest.fixture(scope="function", autouse=True)
+    def setup(self, browser):
+        link = 'http://selenium1py.pythonanywhere.com/ru/accounts/login/'
+        email = str(time.time()) + "@fakermail.org"
+        password = 'Qw21eR4t50'
+        login_page = LoginPage(browser, link)
+        login_page.should_be_login_page()
+        login_page.register_new_user(email, password)
+        login_page.should_be_authorized_user()
 
 
 def test_user_cant_see_success_message(self, browser):
